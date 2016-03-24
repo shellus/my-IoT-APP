@@ -1,0 +1,45 @@
+<ion-view view-title="设备">
+
+  <ion-content class="padding">
+
+      <div class="button-bar">
+          <a class="button active">在线</a>
+          <a class="button">全部</a>
+          <a class="button">离线</a>
+      </div>
+
+
+      <ion-refresher
+              pulling-text="下拉刷新..."
+              refreshing-text="正在加载..."
+              on-refresh="doRefresh()">
+      </ion-refresher>
+      <ion-list>
+          <ion-item ng-repeat="device in devices">
+
+              <a class="item item-avatar" href="#">
+                  <img src="{{device.photo}}">
+                  <h2>{{ device.name }}</h2>
+                  <p>{{ device.description }}</p>
+              </a>
+
+          </ion-item>
+      </ion-list>
+      <div class="item range">
+          <i class="icon ion-volume-low"></i>
+          <input type="range" name="volume">
+          <i class="icon ion-volume-high"></i>
+      </div>
+
+      <div class="list">
+          <div class="item range range-positive">
+              <i class="icon ion-ios-sunny-outline"></i>
+              <input type="range" name="volume" min="0" max="100" value="33">
+              <i class="icon ion-ios-sunny"></i>
+          </div>
+      </div>
+
+
+
+  </ion-content>
+</ion-view>
