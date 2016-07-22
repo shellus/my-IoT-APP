@@ -1,5 +1,9 @@
 <ion-view view-title="设备">
-
+    <ion-nav-buttons side="right">
+        <a class="button" ui-sref="index.add">
+            <span class="ion-plus-circled"></span>
+        </a>
+    </ion-nav-buttons>
   <ion-content class="padding">
 
       <div class="button-bar">
@@ -17,7 +21,7 @@
       <ion-list>
           <ion-item ng-repeat="device in devices">
 
-              <a class="item item-avatar" href="#">
+              <a class="item item-avatar" ui-sref="{{device.route}}">
                   <img src="{{device.photo}}">
                   <h2>{{ device.name }}</h2>
                   <p>{{ device.description }}</p>

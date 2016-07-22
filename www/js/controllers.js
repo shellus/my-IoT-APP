@@ -27,15 +27,19 @@ angular.module('starter.controllers', [])
         neo_pixel: {
             'photo': 'img/devices/neo_pixel.jpg',
             'name': "彩灯条1",
-            'description': "彩色灯条，照亮彩色心情."
+            'description': "彩色灯条，照亮彩色心情.",
+            'route': "index.ws28"
         },
         access_switch: {
             'photo': 'img/devices/access_switch.jpg',
             'name': "门禁开关1",
-            'description': "手指轻点，门就开了"
-        },
+            'description': "手指轻点，门就开了",
+            'route': "index.device"
+        }
     };
     $scope.doRefresh = function(){
         $scope.$broadcast('scroll.refreshComplete');
     }
+}).controller('Ws28Ctrl', function ($scope, $http) {
+
 });

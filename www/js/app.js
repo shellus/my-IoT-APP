@@ -51,13 +51,30 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
             .state('index.device', {
                 url: '/',
                 views: {
-                    'tab-dash': {
+                    'tab-device': {
                         templateUrl: 'templates/main/device.html',
                         controller: 'MyController'
                     }
                 }
             })
-
+            .state('index.add', {
+                url: 'device/add',
+                views: {
+                    'tab-device': {
+                        templateUrl: 'templates/device/ws28.html',
+                        controller: 'Ws28Ctrl'
+                    }
+                }
+            })
+            .state('index.ws28', {
+                url: 'device/ws28',
+                views: {
+                    'tab-device': {
+                        templateUrl: 'templates/device/ws28.html',
+                        controller: 'Ws28Ctrl'
+                    }
+                }
+            })
             .state('index.chats', {
                 url: '/chats',
                 views: {
